@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sidharth Rao</title>
+<meta name="description" content="Sidharth Rao, Computer Engineering at Iowa State University. Software engineering and full-stack development. Experience, projects and resume.">
+<meta name="theme-color" content="#eaf0f4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="bubbles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<div class="app" id="app">
+  <main class="stage" id="stage">
+    <section class="view" id="view-home" aria-label="Introduction"></section>
+    <section class="view is-hidden" id="view-section" aria-live="polite" inert></section>
+    <div class="scrim" id="scrim"></div>
+    <section class="channel" id="channel" aria-live="polite" hidden></section>
+  </main>
+
+  <footer class="shelf">
+    <div class="shelf-bar" aria-hidden="true"></div>
+    <button class="orb orb-home" id="orb-home" aria-label="Home"></button>
+    <div class="clock" id="clock" aria-hidden="true"><div class="time" id="time"></div><div class="date" id="date"></div></div>
+    <button class="orb orb-mail" id="orb-mail" aria-label="Contact"></button>
+  </footer>
+</div>
+
+<noscript>
+  <p style="position:fixed;inset:0;display:grid;place-items:center;margin:0;padding:24px;background:#eaf0f4;color:#44525b;font:16px system-ui;text-align:center">
+    This site needs JavaScript. You can reach me at sidharthprao@gmail.com.
+  </p>
+</noscript>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

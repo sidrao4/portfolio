@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo placeholder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: grid; place-items: center; padding: 20px; font-family: "M PLUS Rounded 1c", system-ui, sans-serif; color: #44525b;
+    background: radial-gradient(900px 500px at 50% -10%, #fff, rgba(255, 255, 255, 0) 70%), linear-gradient(#f4f7f9, #e3eaee);
+  }
+  .card {
+    width: min(440px, 100%); padding: 30px 30px 26px; text-align: center; background: #fff;
+    border: 1.5px solid #d3dbe0; border-radius: 22px; box-shadow: 0 6px 20px rgba(90, 110, 125, .14);
+  }
+  .tag {
+    display: inline-block; padding: 4px 13px; border-radius: 999px; background: #e8f6fd; color: #1690c9;
+    font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  }
+  h1 { margin: 16px 0 8px; font-size: 26px; font-weight: 800; line-height: 1.2; color: #3d4a53; }
+  p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #7a8790; }
+  .bar { height: 6px; margin: 22px auto 0; width: 70%; border-radius: 6px; background: #e4eaee; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 35%; border-radius: 6px; background: #2eb0ea; animation: slide 2.4s ease-in-out infinite; }
+  @keyframes slide { 0% { transform: translateX(-110%); } 100% { transform: translateX(300%); } }
+  @media (prefers-reduced-motion: reduce) { .bar i { animation: none; margin-left: 30%; } }
+</style>
+</head>
+<body>
+  <main class="card">
+    <span class="tag">Demo placeholder</span>
+    <h1 id="t">Demo</h1>
+    <p>Your live site, photo or PDF goes on this screen. Point this channel's <b>media</b> at it in <b>js/content.js</b>.</p>
+    <div class="bar" aria-hidden="true"><i></i></div>
+  </main>
+  <script>
+    const t = new URLSearchParams(location.search).get("title");
+    if (t) document.getElementById("t").textContent = t;
+  </script>
+</body>
+</html>
